@@ -2,8 +2,12 @@ Creating a simple class for die in order to simulate a simple dice game.
 
 TO DO:
 
-1.  Add players
+1.  Add players. MOSTLY DONE
 
-2.  Add scores
+2.  Add Player scores and keep track of them 
 
 3.  Add rules (ones, fives, 3-of-a-kind, 1-2-3-4-5-6, 6-of-a-kind, etc.)
+
+4.  Add mechanics for keeping dice and continuing to roll remaining
+
+5.  Create function converting kept dice to score (with intermittent steps to keep track of e.g. three of a kinds), needed for 2
