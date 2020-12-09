@@ -8,8 +8,12 @@ TO DO:
 
 3.  Add rules (ones, fives, 3-of-a-kind, 1-2-3-4-5-6, 6-of-a-kind, etc.)
 
-4.  Add mechanics for keeping dice and continuing to roll remaining.  STARTED, but while loop needs to be properly debugged
+4.  Add mechanics for keeping dice and continuing to roll remaining.  STARTED, but while loop needs to be properly debugged.  
+
+I think this may be functional.
 
 5.  Create function converting kept dice to score (with intermittent steps to keep track of e.g. three of a kinds), needed for 2
 
-6.  Need to overhaul and debug detect_keepable and keep_dice since they were poorly sketched and omitted reference to die objects in original code
+6.  Need to overhaul and debug detect_keepable and keep_dice since they were poorly sketched and omitted reference to die objects in original code.  FIXED I THINK
+
+7.  Need to implement option to hold without continuing to roll.  Then pass held dice into function in 5.
