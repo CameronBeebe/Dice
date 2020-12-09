@@ -17,3 +17,5 @@ I think this may be functional.
 6.  Need to overhaul and debug detect_keepable and keep_dice since they were poorly sketched and omitted reference to die objects in original code.  FIXED I THINK
 
 7.  Need to implement option to hold without continuing to roll.  Then pass held dice into function in 5.
+
+8.  Create verbosity logic. Maybe verbose = 0, 1, or 2, where 1 shows faces and 2 shows faces and die objects in memory.
