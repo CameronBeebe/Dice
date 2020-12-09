@@ -19,3 +19,5 @@ I think this may be functional.
 7.  Need to implement option to hold without continuing to roll.  Then pass held dice into function in 5.
 
 8.  Create verbosity logic. Maybe verbose = 0, 1, or 2, where 1 shows faces and 2 shows faces and die objects in memory.
+
+9.  Make player_take_turn while loop logic more elegant...
