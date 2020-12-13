@@ -21,3 +21,5 @@ I think this may be functional.
 8.  Create verbosity logic. Maybe verbose = 0, 1, or 2, where 1 shows faces and 2 shows faces and die objects in memory.
 
 9.  Make player_take_turn while loop logic more elegant...
+
+7.  Compactify all lengthy list comprehensions?  Maybe use type()==Dice_Game.Die?
