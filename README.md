@@ -23,3 +23,5 @@ I think this may be functional.
 9.  Make player_take_turn while loop logic more elegant...
 
 7.  Compactify all lengthy list comprehensions?  Maybe use type()==Dice_Game.Die?
+
+8.  Need function to bring-em-back when all dice are counters, maybe same function as converting to score (5)?
