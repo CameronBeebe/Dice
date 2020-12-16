@@ -25,3 +25,5 @@ I think this may be functional.
 7.  Compactify all lengthy list comprehensions?  Maybe use type()==Dice_Game.Die?
 
 8.  Need function to bring-em-back when all dice are counters, maybe same function as converting to score (5)?
+
+9.  Make function for converting list of lists of dice objects to list of lists of dice faces, to make code more readable without list comps everywhere and address 7
