@@ -334,8 +334,13 @@ class Dice_Game:
         '''
 
         stay = 0
+        
+        if Player.score == 0:
+            if potential_score >= 500:
+                print("ON THE BOARD!!!!!!!!!!!!")
+                stay = 1
 
-        if potential_score >= Player.threshold:
+        elif potential_score >= Player.threshold:
             stay = 1
 
         return stay
