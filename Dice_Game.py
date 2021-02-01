@@ -41,6 +41,7 @@ class Dice_Game:
     '''
     
     def __init__(self, players, num_dice=6):
+        print('INITIALIZING GAME.')
         self.player_names = ['Player_{}'.format(name + 1) for name in [j for j in range(players)]]
         self.players = [self.Player(name=player) for player in self.player_names]
         self.dice = [self.Die(sides=6) for die in [i for i in range(num_dice)]]
@@ -53,7 +54,7 @@ class Dice_Game:
         
     def play_game(self):
         '''
-        Loop over players to play a game, determining a winner with the highest score.
+        Method to loop over players to play a game, determining a winner with the highest score.
         '''
         
         print('PLAYING GAME')
@@ -79,7 +80,7 @@ class Dice_Game:
         
     def object_list_to_faces(self,die_list):
         '''
-        Function takes list (potentially including lists) of die objects and returns a list (of lists) of the die faces.
+        Method takes list (potentially including lists) of die objects and returns a list (of lists) of the die faces.
         '''
 
         face_list = [i.face_up if type(i) == Dice_Game.Die else [j.face_up for j in i] for i in die_list]
@@ -87,6 +88,9 @@ class Dice_Game:
         return face_list
     
     def shake(self,dice_to_roll,Player):
+        '''
+        Method takes dice and Players and returns that Player's shaken dice.
+        '''
         print('SHAKING')
         shook_dice = [die.roll() for die in dice_to_roll]
         #print('I,', Player.name, 'shook the dice:', [i.face_up for i in dice_to_roll])
@@ -292,7 +296,7 @@ class Dice_Game:
     def kept_dice_faces_to_score(self,kept_dice_faces):
         
         '''
-        Convert list of kept dice to a score.
+        Method to convert list of kept dice to a score.
         '''
         
         print('SCORING')
@@ -328,7 +332,7 @@ class Dice_Game:
     def stay_or_go(self,potential_score,Player):
         '''
         
-        Function for agent to decide whether to stay with current dice, or keep shaking.
+        Method for agent to decide whether to stay with current dice, or keep shaking.
         
         FUTURE IMPLEMENTATION: Create player method(s) for more sophisticated decision-making.
         '''
@@ -348,6 +352,8 @@ class Dice_Game:
     
     class Die:
         '''
+        Class for a Die object.
+        
         Dice have a number of sides and, unless in motion, always have one face up.  
 
         Cocked dice are ignored, and motion/trajectories are assumed to be a random choice from the number of sides.
@@ -365,6 +371,8 @@ class Dice_Game:
     # Players as subclass, called in Dice_Game init
     class Player:
         '''
+        Class for Player objects.
+        
         Each player is equipped with several attributes, mainly for statistics and for future agent-based learning.
         '''
     
@@ -378,11 +386,12 @@ class Dice_Game:
             self.threshold = self.det_threshold()
             self.went_out = 0
             self.winner = 0
+            print('INITIALIZING PLAYER:', name)
             
             
         def det_threshold(self):
             '''
-            Just a simple function to determine a random threshold so players are different. 
+            Just a simple method to determine a random threshold so players are different. 
             
             In the future this should probably be dynamically changed as a function of game state and others.
             '''
