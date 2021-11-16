@@ -1,4 +1,6 @@
-Simulating a simple Dice game (called "Dice").  End goal is to have artificial agents interface with the sumulation to learn how to effectively play.
+Simulating a simple Dice game (called "Dice").  
+
+Future development would make interface for artificial agents to play (and learn to play).
 
 TO DO:
 
